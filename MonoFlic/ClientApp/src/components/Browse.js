@@ -48,7 +48,12 @@ const BrowseMovies = () => {
                     <div key={key.id} className="browse-card" >
                         <p>{key.name}</p>
                         <img src={key.posterURL} alt="yes" />
-                        <Link className="watch-link" to='/stream'>Watch Now!</Link>
+                        <Link className="watch-link"
+                            to="/stream" state={{
+                                streamid: key.id,
+                                streamtype: "movie",
+                            }}>Watch Now!
+                        </Link>
                     </div>
                 )) ?? ""}
             </div>
@@ -87,7 +92,12 @@ const BrowseSeries = () => {
                     <div key={key.id} className="browse-card" >
                         <p>{key.name}</p>
                         <img src={key.posterURL} alt="yes" />
-                        <Link className="watch-link" to='/stream'>Watch Now!</Link>
+                        <Link className="watch-link"
+                            to="/stream" state={{
+                                streamid: key.id,
+                                streamtype: "series",
+                            }}>Watch Now!
+                        </Link>
                     </div>
                 )) ?? ""}
             </div>

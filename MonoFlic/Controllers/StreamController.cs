@@ -15,13 +15,23 @@ namespace MonoFlic.Controllers
             _context = context;
         }
 
-        [Route("Get/{id}")]
+        [Route("GetSeries/{id}")]
         [HttpGet]
-        public FileStreamResult Get(int id)
+        public FileStreamResult GetSeries(int id)
         {
             var url = _context.Series.Where(x => x.Id == id).First().TrailerURL;
 
             var filestream = System.IO.File.OpenRead(@""+url);
+            return File(filestream, contentType: "video/mp4", fileDownloadName: "test", enableRangeProcessing: true);
+        }
+
+        [Route("GetMovie/{id}")]
+        [HttpGet]
+        public FileStreamResult GetMovie(int id)
+        {
+            var url = _context.Movies.Where(x => x.Id == id).First().TrailerURL;
+
+            var filestream = System.IO.File.OpenRead(@"" + url);
             return File(filestream, contentType: "video/mp4", fileDownloadName: "test", enableRangeProcessing: true);
         }
     }
