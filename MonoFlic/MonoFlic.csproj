@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\img\" />
+    <None Remove="Pages\Homepage.js" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
