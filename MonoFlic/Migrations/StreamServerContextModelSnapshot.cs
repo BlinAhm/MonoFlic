@@ -52,7 +52,7 @@ namespace MonoFlic.Migrations
 
                     b.HasIndex("SeriesId");
 
-                    b.ToTable("Episode", (string)null);
+                    b.ToTable("Episode");
                 });
 
             modelBuilder.Entity("MonoFlic.Models.Movie", b =>
@@ -79,6 +79,10 @@ namespace MonoFlic.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PosterURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -114,6 +118,10 @@ namespace MonoFlic.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PosterURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
