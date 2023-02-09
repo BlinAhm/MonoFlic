@@ -1,7 +1,7 @@
 ﻿.browse-card {
     width: 25%;
-    height: 350px;
-    margin: 30px;
+    height: 400px;
+    margin: 20px;
     background-color: whitesmoke;
     border-radius: 4px;
     border: solid black 2px;
@@ -10,3 +10,17 @@
     justify-content: space-around;
     align-items: center;
 }
+
+    .browse-card img {
+        height: 300px;
+        margin-block: -10px;
+    }
+
+    .browse-card .watch-link {
+        text-decoration: none;
+        color: black;
+        border: solid 2px black;
+        padding: 2px;
+        padding-inline: 6px;
+        border-radius: 6px;
+    }

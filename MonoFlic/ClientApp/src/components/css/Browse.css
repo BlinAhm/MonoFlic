@@ -1,8 +1,20 @@
-﻿.card-container {
+﻿.card-container .cards {
     width: 100%;
     background-color: grey;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.card-container .card-top {
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+    font-size: 22px;
+    padding-block: 5px;
+    border-top: solid 2px black;
 }

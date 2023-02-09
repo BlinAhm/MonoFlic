@@ -1,6 +1,7 @@
 import ApiAuthorzationRoutes from './components/api-authorization/ApiAuthorizationRoutes';
 import { Browse } from './components/Browse';
 import { Home } from "./components/Home";
+import { Stream } from "./components/Stream";
 
 const AppRoutes = [
     {
@@ -16,6 +17,11 @@ const AppRoutes = [
         path: '/browse',
         requireAuth: true,
         element: <Browse />
+    },
+    {
+        path: '/stream',
+        requireAuth: true,
+        element: <Stream />
     },
     ...ApiAuthorzationRoutes
 ];
