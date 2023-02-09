@@ -11,10 +11,12 @@ namespace MonoFlic.Data
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Series> Series { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Movie>().ToTable("Movie");
+            modelBuilder.Entity<Series>().ToTable("Series");
         }
     }
 }

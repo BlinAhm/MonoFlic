@@ -19,9 +19,9 @@ namespace MonoFlic.Controllers
         [HttpGet]
         public FileStreamResult Get(int id)
         {
-            
+            var url = _context.Series.Where(x => x.Id == id).First().TrailerURL;
 
-            var filestream = System.IO.File.OpenRead(@"./StreamServer/TheLastOfUsTrailer.mp4");
+            var filestream = System.IO.File.OpenRead(@""+url);
             return File(filestream, contentType: "video/mp4", fileDownloadName: "test", enableRangeProcessing: true);
         }
     }
